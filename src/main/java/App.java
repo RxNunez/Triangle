@@ -14,20 +14,29 @@ public class App {
 
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-            System.out.println("Enter length of Triangle Side A.");
-            String inputSideA = bufferedReader.readLine();
-            int SideA = Integer.parseInt(inputSideA);
-            System.out.println(SideA);
+            System.out.println("Enter length of Triangle Side 1.");
+            String inputSide1 = bufferedReader.readLine();
+            int side1 = Integer.parseInt(inputSide1);
+            System.out.println(side1);
 
-            System.out.println("Enter length of Triangle Side B.");
-            String inputSideB = bufferedReader.readLine();
-            int SideB = Integer.parseInt(inputSideB);
-            System.out.println(SideB);
+            System.out.println("Enter length of Triangle Side 2.");
+            String inputSide2 = bufferedReader.readLine();
+            int side2 = Integer.parseInt(inputSide2);
+            System.out.println(side2);
 
-            System.out.println("Enter length of Triangle Side C.");
-            String inputSideC = bufferedReader.readLine();
-            int SideC = Integer.parseInt(inputSideC);
-            System.out.println(SideC);
+            System.out.println("Enter length of Triangle Side 3.");
+            String inputSide3 = bufferedReader.readLine();
+            int side3 = Integer.parseInt(inputSide3);
+            System.out.println(side3);
+
+            Triangle allSides = new Triangle(side1, side2, side3);
+
+            String result = allSides.TriangleTracker();
+            if (result.equals("not a valid triangle")) {
+                System.out.println(" This is " + result);
+            } else {
+                System.out.println("This is " + result);
+            }
         }
         catch(IOException e)
         {
